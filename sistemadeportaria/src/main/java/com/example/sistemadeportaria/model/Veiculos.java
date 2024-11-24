@@ -31,9 +31,6 @@ public class Veiculos {
     @Column(name = "horaSaida")
     private LocalDateTime dataHoraSaida;
 
-    public Veiculos() {
-    }
-
     public Integer getId() {
         return id;
     }
@@ -58,20 +55,27 @@ public class Veiculos {
         this.placa = placa;
     }
 
-    public Modelo getModelo() {
+   public Modelo getModelo() {
         return modelo;
-    }
+   }
 
-    public void setModelo(Modelo modelo) {
-        this.modelo = modelo;
-    }
+   public void setModelo(Modelo modelo) {
 
-    public Marca getMarca() {
+   }
+
+   public Marca getMarca() {
         return marca;
+   }
+   public void setMarca(Marca marca) {
+        this.marca = marca;
+   }
+
+    public LocalDateTime getDataHoraSaida() {
+        return dataHoraSaida;
     }
 
-    public void setMarca(Marca marca) {
-        this.marca = marca;
+    public void setDataHoraSaída(LocalDateTime dataHoraSaida) {
+        this.dataHoraSaida = dataHoraSaida;
     }
 
     public LocalDateTime getDataHoraEntrada() {
@@ -80,13 +84,5 @@ public class Veiculos {
 
     public void setDataHoraEntrada(LocalDateTime dataHoraEntrada) {
         this.dataHoraEntrada = dataHoraEntrada;
-    }
-
-    public LocalDateTime getDataHoraSaida() {
-        return dataHoraSaida;
-    }
-
-    public void setDataHoraSaida(LocalDateTime dataHoraSaida) {
-        this.dataHoraSaida = dataHoraSaida;
     }
 }
