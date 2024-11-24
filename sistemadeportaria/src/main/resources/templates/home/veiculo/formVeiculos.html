@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <title>+ Inserir Veículos</title>
+    <meta name="author" content="Marcos Eduardo"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+<div class="container" style="margin-top: 50px;">
+    <h4>+ Inserir Veículos</h4>
+    <hr>
+    <form method="post" action="/insertVeiculos" th:object="${veiculo}">
+        <div class="row">
+            <div class="col-md-6 form-group offset-md-3">
+                <label>Nome do Motorista</label>
+                <input class="form-control" placeholder="Ex: Marcos Eduardo" th:field="*{nome}" type="text" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 form-group offset-md-3">
+                <label>Selecione o Modelo do Veículo</label>
+                <select class="form-control" th:field="*{veiculo.modelo}">
+                    <option th:each="modelo : ${T(com.example.sistemadeportaria.Enums.Modelo).values()}"
+                            th:value="${modelo}" th:text="${modelo}">
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 form-group offset-md-3">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

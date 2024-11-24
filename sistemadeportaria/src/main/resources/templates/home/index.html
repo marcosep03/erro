@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <title>Projeto Sistema de Portaria</title>
+    <meta name="author" content="Marcos Eduardo"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div th:replace="~{fragmentos/fragmentos.html :: cabecalho}"></div>
+
+    <section class="neo-section" style="background-image: url('img/fundo.jpg');">
+        <div class="sombra"></div>
+        <div class="center neo-container">
+            <h1 class="texto-centro">Sistema de Portaria de Veículos</h1>
+            <div class="botoes">
+                <div class="wm">
+                    <h5 class="btn">CADASTRAR VEÍCULO</h5>
+                </div>
+                <div class="wm">
+                    <h5 class="btn justify-content-center">ENCONTRAR VEÍCULO</h5>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </section>
+
+    <div th:replace="~{fragmentos/fragmentos.html :: rodape}"></div>
+
+
+
+<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
